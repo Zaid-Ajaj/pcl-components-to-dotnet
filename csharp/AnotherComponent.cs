@@ -11,7 +11,7 @@ namespace Components
         public AnotherComponent(string name, ComponentResourceOptions? opts = null)
             : base("components:index:AnotherComponent", name, ResourceArgs.Empty, opts)
         {
-            var password = new Random.RandomPassword("password", new()
+            var password = new Random.RandomPassword($"{name}-password", new()
             {
                 Length = 16,
                 Special = true,
